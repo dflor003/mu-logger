@@ -1,0 +1,31 @@
+{
+  "name": "mu-logger",
+  "version": "0.1.0",
+  "description": "An asynchronous, multi-transport logger optimized for ES6+ and microservices.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dflor003/mu-logger.git"
+  },
+  "keywords": [
+    "log",
+    "logger",
+    "mu",
+    "mu-logger",
+    "microservices",
+    "transactional",
+    "transaction",
+    "transaction id",
+    "correlation",
+    "correlation id"
+  ],
+  "author": "Danil Flores <dflor003@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dflor003/mu-logger/issues"
+  },
+  "homepage": "https://github.com/dflor003/mu-logger#readme"
+}

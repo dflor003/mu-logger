@@ -17,7 +17,7 @@ There are quite a few logging frameworks out there, but one short-coming of thes
 * Log to multiple transports via a structured a simple adapter model
 * Attach correlation ids to log events without polluting your call stack
 * Colorized console output
-* Configurable formats for console and other transpots
+* Configurable formats for console and other transports
 * Simple configuration and customization
 
 # Installation
