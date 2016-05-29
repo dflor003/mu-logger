@@ -35,5 +35,5 @@ export const AllLevels = [
     Levels.Success,
     Levels.Warn,
     Levels.Error,
-    Levels.Fatal
+    Levels.Fatal,
 ];

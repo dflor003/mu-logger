@@ -1,7 +1,5 @@
-import {
-    IConsoleLogConfig, DefaultConsoleConfig, IConsoleColorTheme, IConsoleLevelMapping,
-    DefaultConsoleLevelMapping
-} from './config';
+import {IConsoleLogConfig, IConsoleColorTheme, IConsoleLevelMapping} from './config';
+import {DefaultConsoleConfig, DefaultConsoleLevelMapping} from './config';
 
 import {Utils} from '../../common/utils';
 import {ILogMessage} from '../../log-message';
@@ -51,7 +49,7 @@ export class ConsoleLogger {
         return formatter(text);
     }
 
-    private getLogFunc(name: string) {
+    private getLogFunc(name: string): Function {
         let logFunc = this.levelMap[name] || DefaultConsoleLevelMapping[name];
         if (!logFunc) {
             throw new Error(`Could not find log func for '${name}'`);

@@ -35,7 +35,7 @@ export const DefaultConsoleLevelMapping: IConsoleLevelMapping = {
     [Levels.Warn.name]: console.warn,
     [Levels.Error.name]: console.error,
     [Levels.Fatal.name]: console.error,
-}
+};
 
 export interface IConsoleLogConfig {
     colorize?: boolean;
@@ -46,5 +46,5 @@ export interface IConsoleLogConfig {
 export const DefaultConsoleConfig: IConsoleLogConfig = {
     colorize: true,
     theme: DefaultColorTheme,
-    levelMappings: DefaultConsoleLevelMapping
+    levelMappings: DefaultConsoleLevelMapping,
 };

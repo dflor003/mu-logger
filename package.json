@@ -4,7 +4,15 @@
   "description": "An asynchronous, multi-transport logger optimized for ES6+ and microservices.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "setup": "npm install && npm run typings && npm run build",
+
+    "clean": "echo Cleaning up compiled files && rm -rf ./src/**/*.js && rm -rf ./test/**/*.js",
+    "build": "npm run clean && echo Building TypeScript Files && tsc -p .",
+
+    "clean-typings": "echo Cleaning up TypeScript typings && rm -rf ./typings",
+    "typings": "typings install",
+
+    "lint": "echo Linting TypeScript code && tslint ./src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -14,6 +22,7 @@
     "log",
     "logger",
     "mu",
+    "micro",
     "mu-logger",
     "microservices",
     "transactional",
@@ -34,8 +43,10 @@
     "moment": "^2.13.0"
   },
   "devDependencies": {
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "typescript": "^1.8.10"
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "tslint": "^3.10.2",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
   }
 }
