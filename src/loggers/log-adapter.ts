@@ -1,11 +1,5 @@
 import {ILogMessage} from '../log-message';
 
-export interface ILogHandlerFunction {
-    (message: ILogMessage): Promise<void>;
-}
-
 export interface ILogAdapter {
-    log: ILogHandlerFunction;
+    log(message: ILogMessage): void|Promise<void>;
 }
-
-export type LogAdapter = ILogAdapter | ILogHandlerFunction;

@@ -19,7 +19,7 @@
       true,
       "spaces"
     ],
-    "interface-name": true,
+    "interface-name": false,
     "jsdoc-format": true,
     "label-position": true,
     "label-undefined": true,
@@ -31,7 +31,21 @@
     "member-ordering": [
       true,
       {
-        "order": "fields-first"
+        "order": [
+          "private-static-field",
+          "private-instance-field",
+          "protected-static-field",
+          "protected-instance-field",
+          "public-static-field",
+          "public-instance-field",
+          "constructor",
+          "public-static-method",
+          "protected-static-method",
+          "private-static-method",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ]
       }
     ],
     "no-any": false,
@@ -52,7 +66,7 @@
     "no-duplicate-key": true,
     "no-shadowed-variable": true,
     "no-duplicate-variable": true,
-    "no-empty": true,
+    "no-empty": false,
     "no-eval": true,
     "no-inferrable-types": true,
     "no-internal-module": true,
@@ -83,7 +97,7 @@
     "semicolon": true,
     "switch-default": true,
     "trailing-comma": [
-      true,
+      false,
       {
         "multiline": "always",
         "singleline": "never"

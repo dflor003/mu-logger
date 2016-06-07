@@ -5,6 +5,7 @@ export interface ILogMessage {
     timestamp: moment.Moment;
     namespace: string;
     level: LogLevel;
-    message: any[];
+    tags: string[];
+    message: string;
     data?: Object;
 }

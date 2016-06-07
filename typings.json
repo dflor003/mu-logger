@@ -1,10 +1,19 @@
 {
   "name": "mu-logger",
   "version": false,
-  "dependencies": {},
+  "dependencies": {
+    "node-uuid": "registry:npm/node-uuid#1.4.7+20160503013124",
+    "sinon": "registry:npm/sinon#1.16.0+20160427193336",
+    "sinon-chai": "registry:npm/sinon-chai#2.8.0+20160310030142"
+  },
   "globalDependencies": {
     "cli-color": "registry:dt/cli-color#0.0.0+20160317120654",
     "moment": "registry:dt/moment#2.8.0+20160316155526",
-    "moment-node": "registry:dt/moment-node#2.11.1+20160511043338"
+    "moment-node": "registry:dt/moment-node#2.11.1+20160511043338",
+    "node": "registry:dt/node#6.0.0+20160602155235"
+  },
+  "globalDevDependencies": {
+    "chai": "registry:dt/chai#3.4.0+20160317120654",
+    "mocha": "registry:dt/mocha#2.2.5+20160317120654"
   }
 }

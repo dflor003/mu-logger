@@ -16,6 +16,7 @@ export const DefaultColorTheme: IConsoleColorTheme = {
     // Log levels
     [Levels.Trace.name]: colors.blackBright,
     [Levels.Debug.name]: colors.blackBright,
+    [Levels.Log.name]: colors.white,
     [Levels.Info.name]: colors.blueBright,
     [Levels.Success.name]: colors.green,
     [Levels.Warn.name]: colors.yellow,
@@ -30,6 +31,7 @@ export interface IConsoleLevelMapping {
 export const DefaultConsoleLevelMapping: IConsoleLevelMapping = {
     [Levels.Trace.name]: console.debug,
     [Levels.Debug.name]: console.debug,
+    [Levels.Log.name]: console.log,
     [Levels.Info.name]: console.log,
     [Levels.Success.name]: console.log,
     [Levels.Warn.name]: console.warn,

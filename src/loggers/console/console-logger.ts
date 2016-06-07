@@ -1,10 +1,7 @@
 import {IConsoleLogConfig, IConsoleColorTheme, IConsoleLevelMapping} from './config';
 import {DefaultConsoleConfig, DefaultConsoleLevelMapping} from './config';
-
-import {Utils} from '../../common/utils';
+import {coalesce} from '../../common/utils';
 import {ILogMessage} from '../../log-message';
-
-const coalesce = Utils.coalesce;
 
 export class ConsoleLogger {
     private colorize: boolean;
@@ -22,7 +19,7 @@ export class ConsoleLogger {
     async log(msg: ILogMessage): Promise<void> {
         let colorize = this.colorizeText;
         let level = msg.level.name;
-        let message = msg.message.map(arg => typeof arg === 'string' ? colorize(level, arg) : arg);
+        let message = colorize(level, msg.message);
         let timestampText = msg.timestamp.format('MM-DD-YYYY HH:mm:ss.SSS');
         let timestamp = colorize('timestamp', `[${timestampText}]`);
         let logNamespace = msg.namespace ? colorize('namespace', `[${msg.namespace}]`) : null;
@@ -30,9 +27,9 @@ export class ConsoleLogger {
         let logFunc = this.getLogFunc(level);
 
         if (logNamespace) {
-            logFunc.call(console, timestamp, logNamespace, levelName, ...message);
+            logFunc.call(console, timestamp, logNamespace, levelName, message);
         } else {
-            logFunc.call(console, timestamp, levelName, ...message);
+            logFunc.call(console, timestamp, levelName, message);
         }
     }
 
