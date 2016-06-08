@@ -13,7 +13,9 @@
     "node": "registry:dt/node#6.0.0+20160602155235"
   },
   "globalDevDependencies": {
-    "chai": "registry:dt/chai#3.4.0+20160317120654",
     "mocha": "registry:dt/mocha#2.2.5+20160317120654"
+  },
+  "devDependencies": {
+    "chai": "registry:npm/chai#3.5.0+20160415060238"
   }
 }

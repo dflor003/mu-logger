@@ -1,0 +1,19 @@
+language: node_js
+sudo: false
+node_js:
+  - '5'
+  - '5.1'
+  - '6'
+
+cache:
+  directories:
+    - node_modules
+    - typings
+install:
+  # Disable progress bar as it slows things down
+  - npm config set progress false
+  # Install dependencies
+  - npm run setup
+
+script:
+  - npm test
