@@ -1,9 +1,11 @@
 language: node_js
 sudo: false
 node_js:
+  - '4.4.5' # Last LTS
   - '5'
-  - '5.1'
+  - '5.11.1' # Last v5.x build
   - '6'
+  - 'node' # Latest
 
 cache:
   directories:
