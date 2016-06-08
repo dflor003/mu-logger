@@ -1,4 +1,4 @@
-µLogger
+µLogger [![Build Status](https://travis-ci.org/dflor003/mu-logger.svg?branch=master)](https://travis-ci.org/dflor003/mu-logger)
 =====
 
 _WORK IN PROGRESS_
