@@ -22,7 +22,7 @@ There are quite a few logging frameworks out there, but one short-coming of thes
 
 # Installation
 
-*Comming soon*
+*Coming soon*
 
 # Usage
 
