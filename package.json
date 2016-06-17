@@ -10,7 +10,8 @@
     "clean-typings": "echo Cleaning up TypeScript typings && rm -rf ./typings",
     "typings": "typings install",
     "lint": "echo Linting TypeScript code && tslint ./src/**/*.ts",
-    "test": "mocha"
+    "test": "mocha",
+    "test-watch": "mocha --watch"
   },
   "repository": {
     "type": "git",
