@@ -7,11 +7,11 @@
     "setup": "npm install && npm run typings && npm run build",
     "clean": "echo Cleaning up compiled files && rm -rf ./src/**/*.js && rm -rf ./test/**/*.js",
     "build": "npm run clean && echo Building TypeScript Files && tsc -p .",
-    "clean-typings": "echo Cleaning up TypeScript typings && rm -rf ./typings",
+    "clean:typings": "echo Cleaning up TypeScript typings && rm -rf ./typings",
     "typings": "typings install",
     "lint": "echo Linting TypeScript code && tslint ./src/**/*.ts",
     "test": "mocha",
-    "test-watch": "mocha --watch"
+    "test:watch": "mocha --watch"
   },
   "repository": {
     "type": "git",
